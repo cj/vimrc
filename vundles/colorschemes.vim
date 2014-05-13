@@ -1,0 +1,1 @@
+Plugin 'flazz/vim-colorschemes'
