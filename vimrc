@@ -20,6 +20,7 @@ set nocompatible
 syntax on
 set nowrap
 set shortmess+=A " Always edit file, even when swap file is found
+set backspace=eol,start,indent
 
 " Fix esc timeout
 " http://www.johnhawthorn.com/2012/09/vi-escape-delays/
