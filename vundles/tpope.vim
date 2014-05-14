@@ -3,8 +3,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 
-xmap s <Plug>VSurround
-xmap S <Plug>VSurround
+au VimEnter * xmap s <Plug>VSurround
+au VimEnter * xmap S <Plug>VSurround
 
 " For fugitive.git, dp means :diffput. Define dg to mean :diffget
 nnoremap <silent> <Leader>dg :diffget<CR>
