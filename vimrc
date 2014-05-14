@@ -184,6 +184,9 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 " }}}
 
+" run last vim terminal command
+map ,. :!<Up><CR>
+
 " User vimrc.after if available {{{
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
