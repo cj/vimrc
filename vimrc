@@ -68,10 +68,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-
 " Status bar
 set laststatus=2
 
@@ -156,7 +152,7 @@ set lazyredraw
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,**/bower/*,**/node_modules/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Use Q to intelligently close a window
 " " (if there are multiple windows into the same buffer)
