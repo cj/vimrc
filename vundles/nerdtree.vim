@@ -11,8 +11,8 @@ let NERDTreeChDirMode  = 2
 let NERDTreeMouseMode  = 2
 let NERDTreeMinimalUI  = 1
 let NERDTreeQuitOnOpen = 1
-let g:nerdtree_tabs_open_on_console_startup = '1'
-let g:nerdtree_tabs_open_on_gui_startup = '1'
+let g:nerdtree_tabs_open_on_console_startup = '0'
+let g:nerdtree_tabs_open_on_gui_startup = '0'
 
 " show current file in nerd tree
 map <silent>,v :NERDTreeFind<CR>
