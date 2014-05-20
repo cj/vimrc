@@ -180,6 +180,8 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 " }}}
 
+autocmd BufRead,BufNewFile *.jbuilder set filetype=Ruby
+
 " User vimrc.after if available {{{
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after

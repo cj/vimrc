@@ -19,3 +19,6 @@ nnoremap <silent> <Leader>gp :Git push<CR>
 " Disable ,gw for :GitGrepWord
 let g:git_grep_no_map = 1
 nnoremap <silent> <Leader>gw :Gwrite<CR>
+
+nmap <Leader>s :%S/
+vmap <Leader>s :S/
