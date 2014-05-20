@@ -14,7 +14,28 @@ let NERDTreeQuitOnOpen = 1
 let g:nerdtree_tabs_open_on_console_startup = '0'
 let g:nerdtree_tabs_open_on_gui_startup = '0'
 
-" show current file in nerd tree
-map <silent>,v :NERDTreeFind<CR>
-map <C-g> :NERDTreeTabsToggle<CR>
-au VimEnter * map <C-g> :NERDTreeTabsToggle<CR>
+function! NTFinderP()
+  "" Check if NERDTree is open
+  if exists("t:NERDTreeBufName")
+    let s:ntree = bufwinnr(t:NERDTreeBufName)
+  else
+    let s:ntree = -1
+  endif
+  if (s:ntree != -1)
+    "" If NERDTree is open, close it.
+    :NERDTreeClose
+  else
+    "" Try to open a :Rtree for the rails project
+    if exists(":Rtree")
+      "" Open Rtree (using rails plugin, it opens in project dir)
+      :Rtree
+    else
+      "" Open NERDTree in the file path
+      :NERDTreeFind
+    endif
+  endif
+endfunction
+
+"" Toggles NERDTreeFind
+map <silent> <C-g> :call NTFinderP()<CR>
+au VimEnter * map <silent> <C-g> :call NTFinderP()<CR>
