@@ -30,6 +30,12 @@ set timeoutlen=1000 ttimeoutlen=0
 set t_Co=256
 set background=dark
 colorscheme candyman
+hi Normal ctermbg=NONE
+hi SignColumn ctermbg=NONE
+hi LineNr ctermbg=NONE
+hi NonText ctermbg=NONE
+hi VertSplit ctermfg=238 ctermbg=238
+hi StatusLine ctermfg=238 ctermbg=238
 
 " Better Line Highlighting
 au InsertEnter * set nocursorline cursorcolumn
