@@ -39,7 +39,7 @@ hi StatusLine ctermfg=238 ctermbg=238
 hi Search term=reverse cterm=NONE ctermfg=217
 hi ColorColumn ctermbg=238
 set colorcolumn=80
-set colorcolumn=+1
+" set colorcolumn=+1
 
 " Better Line Highlighting
 au InsertEnter * set nocursorline cursorcolumn
