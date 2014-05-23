@@ -72,6 +72,8 @@ set smarttab
 set autoindent
 filetype plugin on
 filetype indent on
+" Add words with -'s to auto complete
+set iskeyword+=-
 
 " Searching
 set hlsearch
