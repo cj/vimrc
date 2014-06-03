@@ -194,6 +194,7 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 " }}}
 
 autocmd BufRead,BufNewFile *.jbuilder set filetype=ruby
+autocmd BufRead,BufNewFile *.dom set filetype=ruby
 
 " User vimrc.after if available {{{
 if filereadable(expand("~/.vimrc.after"))
