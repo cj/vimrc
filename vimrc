@@ -38,6 +38,7 @@ hi VertSplit ctermfg=238 ctermbg=238
 hi StatusLine ctermfg=238 ctermbg=238
 hi Search term=reverse cterm=NONE ctermfg=217
 hi ColorColumn ctermbg=238
+au VimEnter * match Todo /\(todo\|fix\|review\)>/
 set colorcolumn=80
 set tw=80
 " set colorcolumn=+1
@@ -195,6 +196,10 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 
 autocmd BufRead,BufNewFile *.jbuilder set filetype=ruby
 autocmd BufRead,BufNewFile *.dom set filetype=ruby
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " User vimrc.after if available {{{
 if filereadable(expand("~/.vimrc.after"))
