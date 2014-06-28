@@ -1,5 +1,6 @@
 Plugin 'benmills/vimux'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 let VimuxResetSequence = ''
 map <silent><Leader>. :w<CR> :call VimuxRunCommand("\e[A")<CR>
