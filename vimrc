@@ -197,6 +197,8 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 autocmd BufRead,BufNewFile *.jbuilder set filetype=ruby
 autocmd BufRead,BufNewFile *.dom set filetype=ruby
 
+cmap w!! w !sudo tee > /dev/null %
+
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
