@@ -1,6 +1,6 @@
 Plugin 'tomtom/quickfixsigns_vim'
 
-let g:quickfixsigns_classes=['longlines', 'qfl', 'vcsdiff', 'breakpoints']
+let g:quickfixsigns_classes=['longlines', 'qfl', 'vcsdiff', 'breakpoints', 'marks']
 
 au VimEnter * hi QuickFixSignsDiffAdd ctermfg=22 ctermbg=NONE guifg=dark
 au VimEnter * hi QuickFixSignsDiffChange ctermfg=100 ctermbg=NONE guifg=dark

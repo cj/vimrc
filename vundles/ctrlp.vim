@@ -1,4 +1,6 @@
 Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'ivalkeen/vim-ctrlp-tjump'
 
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
@@ -16,5 +18,15 @@ endif
 " several Tab workspaces and want to open two windows into the same file.
 let g:ctrlp_switch_buffer = 0
 
+let g:ctrlp_extensions = ['funky', 'tag']
+let g:ctrlp_funky_matchtype = 'path'
+let g:ctrlp_funky_syntax_highlight = 1
 
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+
+let g:ctrlp_tjump_only_silent = 1
+
+au VimEnter * map <C-w> :CtrlPTag<CR>
+au VimEnter * map <C-f> :CtrlPFunky<CR>
 au VimEnter * map <C-r> :CtrlPMRU<CR>
