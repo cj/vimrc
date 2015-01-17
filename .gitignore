@@ -6,3 +6,4 @@ undo/
 
 .netrwhist
 viminfo
+.env

@@ -3,12 +3,15 @@
         source ~/.vimrc.before
     endif
 " }}}
-
 let mapleader = ","
 
 " Load Vundles {{{
   source ~/.vimrc.vundles
 " }}}
+
+if filereadable(expand("~/.vim/.env"))
+  source ~/.vim/.env
+endif
 
 " Set backups {{{
   source ~/.vimrc.backups
