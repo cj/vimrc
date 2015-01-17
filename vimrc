@@ -39,7 +39,8 @@ hi LineNr ctermbg=NONE
 hi NonText ctermbg=NONE
 hi VertSplit ctermfg=238 ctermbg=238
 hi StatusLine ctermfg=238 ctermbg=238
-hi StatusLineNC ctermfg=238 ctermbg=238
+" au VimEnter * hi StatusLineNC ctermfg=238 ctermbg=238
+hi StatusLineNC ctermfg=none ctermbg=238
 hi Search term=reverse cterm=NONE ctermfg=217
 hi ColorColumn ctermbg=238
 au VimEnter * match Todo /\(todo\|fix\|review\)>/
@@ -58,7 +59,6 @@ set cursorline cursorcolumn
 set number
 set ruler
 
-eval "$(hub alias -s)"
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
