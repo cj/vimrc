@@ -33,7 +33,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set t_Co=256
 set background=dark
 colorscheme candyman
-hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE guibg=#2B2F3B
 hi SignColumn ctermbg=NONE
 hi LineNr ctermbg=NONE
 hi NonText ctermbg=NONE
@@ -58,6 +58,7 @@ set cursorline cursorcolumn
 set number
 set ruler
 
+eval "$(hub alias -s)"
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
