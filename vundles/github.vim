@@ -3,3 +3,5 @@
 " endif
 "
 Plugin 'jaxbot/github-issues.vim'
+
+nnoremap <silent><C-i> :Gissues<CR>
