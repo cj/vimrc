@@ -4,6 +4,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 let VimuxResetSequence = ''
 map <silent><Leader>. :w<CR> :call VimuxRunCommand("\e[A")<CR>
+map <silent>t :w<CR> :call VimuxRunCommand("env \\$(cat .env .env.test) bundle exec ruby ".  @% . ' -l ' . line('.'))<CR>
+map <silent>T :w<CR> :call VimuxRunCommand("env \\$(cat .env .env.test) bundle exec ruby ".  @%)<CR>
 
 " run last vim terminal command
 map <Leader>, :!<Up><CR>
