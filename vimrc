@@ -28,6 +28,7 @@ set backspace=eol,start,indent
 " Fix esc timeout
 " http://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
+set textwidth=0 wrapmargin=0
 
 " Theme
 set t_Co=256
