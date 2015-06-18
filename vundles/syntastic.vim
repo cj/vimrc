@@ -1,6 +1,8 @@
 Plugin 'scrooloose/syntastic'
 Plugin 'ngmy/vim-rubocop'
 
+hi SyntasticStyleWarning ctermbg=236
+
 function! ToggleErrors()
   if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
     " No location/quickfix list shown, open syntastic error location panel

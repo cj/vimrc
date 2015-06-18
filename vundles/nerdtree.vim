@@ -17,12 +17,12 @@ Plugin 'ryanoasis/vim-webdevicons'
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+" let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " NERDTree and tabs together in Vim, painlessly
 " Plugin 'jistr/vim-nerdtree-tabs'
 
-let NERDTreeIgnore                      =
+let NERDTreeIgnore =
             \ ['\.pyc', '\.git$', '\~$', '\.swo$', '\.hg', '\.svn', '\.bzr', '\.DS_Store']
 let NERDTreeShowHidden = 1
 " let NERDTreeChDirMode  = 0

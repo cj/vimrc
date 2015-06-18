@@ -34,6 +34,7 @@ set textwidth=0 wrapmargin=0
 set t_Co=256
 set background=dark
 colorscheme candyman
+hi Conceal ctermbg=NONE
 hi Normal ctermbg=NONE guibg=#2B2F3B
 hi SignColumn ctermbg=NONE
 hi LineNr ctermbg=NONE
@@ -44,7 +45,34 @@ hi StatusLine ctermfg=238 ctermbg=238
 hi StatusLineNC ctermfg=none ctermbg=238
 hi Search term=reverse cterm=NONE ctermfg=217
 hi ColorColumn ctermbg=238
-au VimEnter * match Todo /\(todo\|fix\|review\)>/
+" au VimEnter * syn match fixComment /\(fix\)\(:\|>\)/ containedin=.*Comment.*
+" au VimEnter * syn match todoComment /\(todo\)\(:\|>\)/ containedin=.*Comment.*
+" au VimEnter * syn match reviewComment /\(review\|discuss\)\(:\|>\)/ containedin=.*Comment.*
+" " au VimEnter * match myTodo /\(todo\)\(:\|>\)/
+" " au VimEnter * match myFix /\(fix\)\(:\|>\)/
+" " au VimEnter * match myReview /\(review\|discuss\)\(:\|>\)/
+" highlight link fixComment Comment
+" highlight link todoComment Comment
+" highlight link reviewComment Comment
+" hi fixComment ctermfg=52 ctermbg=235
+" hi todoComment ctermfg=22 ctermbg=235 
+" hi reviewComment ctermfg=25 ctermbg=235 
+
+hi cFix ctermfg=124 ctermbg=235
+hi cReview ctermfg=28 ctermbg=235 
+hi cDiscuss ctermfg=93 ctermbg=235 
+hi cTodo ctermfg=26 ctermbg=235 
+
+if has("autocmd")
+  " Highlight TODO, FIXME, NOTE, etc.
+  if v:version > 701
+    autocmd Syntax * call matchadd('cTodo',  '\W\zs\(todo:\|:\{2,}\)')
+    autocmd Syntax * call matchadd('cReview', '\W\zs\(review:\|section:\)')
+    autocmd Syntax * call matchadd('cDiscuss', '\W\zs\(discuss:\|idea:\)')
+    autocmd Syntax * call matchadd('cFix', '\W\zs\(fix:\)')
+  endif
+endif
+
 set colorcolumn=80
 set tw=80
 " set colorcolumn=+1
@@ -104,6 +132,7 @@ set secure " disable unsafe commands in local .vimrc files
 nnoremap Y yy
 " Redo
 map <silent> r :red<CR>
+map <silent> L :e!<CR>
 " Save
 map <silent> W :w<CR>
 " New tab
