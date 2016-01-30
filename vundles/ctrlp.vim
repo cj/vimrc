@@ -1,4 +1,4 @@
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'ivalkeen/vim-ctrlp-tjump'
 

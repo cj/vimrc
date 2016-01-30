@@ -31,6 +31,7 @@ map <Leader>, :!<Up><CR>
 let g:tmuxline_preset = {
   \ 'a': '#S',
   \ 'b': '#P',
+  \ 'c': '#(cat ~/.pomo_stat)',
   \ 'win': ['#I', '#W'],
   \ 'x': '%a',
   \ 'y': ['%b %d', '%R'],

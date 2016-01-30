@@ -1,3 +1,7 @@
+if has('nvim')
+  runtime! plugin/python_setup.vim
+endif
+
 " User vimrc.before if available {{{
     if filereadable(expand("~/.vimrc.before"))
         source ~/.vimrc.before
@@ -59,17 +63,20 @@ hi ColorColumn ctermbg=238
 " hi reviewComment ctermfg=25 ctermbg=235 
 
 hi cFix ctermfg=124 ctermbg=235
-hi cReview ctermfg=28 ctermbg=235 
+hi cNote ctermfg=28 ctermbg=235 
 hi cDiscuss ctermfg=93 ctermbg=235 
 hi cTodo ctermfg=26 ctermbg=235 
+hi cWarning ctermfg=185 ctermbg=235 
 
 if has("autocmd")
   " Highlight TODO, FIXME, NOTE, etc.
   if v:version > 701
-    autocmd Syntax * call matchadd('cTodo',  '\W\zs\(todo:\|:\{2,}\)')
-    autocmd Syntax * call matchadd('cReview', '\W\zs\(review:\|section:\)')
+    " autocmd Syntax * call matchadd('cTodo',  '\W\zs\(todo:\|:\{2,}\)')
+    autocmd Syntax * call matchadd('cTodo',  '\W\zs\(todo:\|review:\)')
+    autocmd Syntax * call matchadd('cNote', '\W\zs\(note:\|section:\)')
     autocmd Syntax * call matchadd('cDiscuss', '\W\zs\(discuss:\|idea:\)')
-    autocmd Syntax * call matchadd('cFix', '\W\zs\(fix:\)')
+    autocmd Syntax * call matchadd('cFix', '\W\zs\(fix:\|issue:\)')
+    autocmd Syntax * call matchadd('cWarning', '\W\zs\(warning:\)')
   endif
 endif
 

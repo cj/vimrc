@@ -1,23 +1,26 @@
 " A tree explorer plugin for vim.
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-let g:NERDTreeIndicatorMap = {
-  \ "Modified"  : "✹ ",
-  \ "Staged"    : "✚",
-  \ "Untracked" : "✭",
-  \ "Renamed"   : "➜ ",
-  \ "Unmerged"  : "═",
-  \ "Deleted"   : "✖",
-  \ "Dirty"     : "✗",
-  \ "Clean"     : "✔︎",
-  \ "Unknown"   : "?"
-  \ }
+" let g:NERDTreeIndicatorMap = {
+"   \ "Modified"  : "✹",
+"   \ "Staged"    : "✚",
+"   \ "Untracked" : "✭",
+"   \ "Renamed"   : "➜ ",
+"   \ "Unmerged"  : "═",
+"   \ "Deleted"   : "✖",
+"   \ "Dirty"     : "✗",
+"   \ "Clean"     : "✔︎",
+"   \ "Unknown"   : "?"
+"   \ }
 
 Plugin 'ryanoasis/vim-webdevicons'
 
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+au VimEnter * let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+" au VimEnter * let g:WebDevIconsUnicodeDecorateFolderNodeDefaultSymbol = ' '
+
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
-" let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
 
 " NERDTree and tabs together in Vim, painlessly
 " Plugin 'jistr/vim-nerdtree-tabs'

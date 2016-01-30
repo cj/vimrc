@@ -1,0 +1,1 @@
+/home/cj/.vim/vimrc

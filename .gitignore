@@ -3,6 +3,7 @@ bundle/
 backup/
 swap/
 undo/
+.gissue-cache
 
 .netrwhist
 viminfo
