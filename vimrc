@@ -157,6 +157,7 @@ map <silent> ,9 :tabn 9<cr>
 
 " Move between split windows by using the four directions H, J, K, L
 nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <bs> <C-w>h
 nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
